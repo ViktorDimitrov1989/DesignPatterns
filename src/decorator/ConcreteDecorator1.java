@@ -1,21 +1,21 @@
 package decorator;
 
-public class ConcreteDecoratorA extends Decorator {
+public class ConcreteDecorator1 extends Decorator {
 
-    public ConcreteDecoratorA() {
+    public ConcreteDecorator1() {
     }
 
-    public ConcreteDecoratorA(Component component) {
+    public ConcreteDecorator1(Component component) {
         super(component);
     }
 
     @Override
-    public void methodA() {
-
+    public String methodA() {
+        return super.getComponent().methodA() + "ConcreteDecorator1 methodA()";
     }
 
     @Override
-    public void methodB() {
-
+    public String methodB() {
+        return super.getComponent().methodB() + "ConcreteDecorator1 methodB()";
     }
 }
